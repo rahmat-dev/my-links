@@ -12,7 +12,7 @@ export interface Link {
 
 export const mainLinks: Link[] = [
   {
-    label: 'My Personal Website (rahmat.dev)',
+    label: 'My Personal Website',
     href: 'https://www.rahmat.dev',
     bg: 'slate',
   },

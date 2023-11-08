@@ -4,10 +4,11 @@ import { mainLinks, socialLinks } from './data'
 
 export default function App() {
   return (
-    <main className="grid min-h-screen w-full place-items-center bg-teal-300 p-4">
+    <div className="grid min-h-screen w-full place-items-center bg-teal-300 p-4">
       <div className="w-full max-w-md rounded-xl border-2 border-black bg-neutral-100 p-6 shadow-[5px_5px_black]">
-        <div className="-mt-20 text-center">
+        <header className="-mt-20 text-center">
           <img
+            alt="photo profile"
             src="/me.webp"
             className="mx-auto aspect-square w-40 rounded-lg border-2 border-black object-cover shadow-[5px_5px_black]"
           />
@@ -27,11 +28,11 @@ export default function App() {
             ]}
             speed={50}
             repeat={Infinity}
-            className="font-body text-lg"
+            className="font-body text-lg font-medium text-slate-500"
           />
-        </div>
+        </header>
 
-        <div className="mt-10 flex flex-col items-center gap-5">
+        <main className="mt-10 flex flex-col items-center gap-5">
           {mainLinks.map(({ href, label, bg }) => (
             <ButtonLink
               key={href}
@@ -43,9 +44,9 @@ export default function App() {
               {label}
             </ButtonLink>
           ))}
-        </div>
+        </main>
 
-        <div className="mt-16 flex justify-center gap-4">
+        <footer className="mt-16 flex justify-center gap-4">
           {socialLinks.map(({ href, icon, bg }) => (
             <ButtonLink
               key={href}
@@ -59,8 +60,8 @@ export default function App() {
               {icon}
             </ButtonLink>
           ))}
-        </div>
+        </footer>
       </div>
-    </main>
+    </div>
   )
 }
